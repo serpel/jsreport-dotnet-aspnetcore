@@ -8,7 +8,7 @@ build:
 before_build:
   - cmd: dotnet restore
 artifacts:
-- path: jsreport.AspNetCore\bin\Debug\jsreport.AspNetCore.*.nupkg
+- path: jsreport.AspNetCore\bin\Debug\s.jsreport.AspNetCore.*.nupkg
 deploy:
 - provider: NuGet
   server: NuGet.org
