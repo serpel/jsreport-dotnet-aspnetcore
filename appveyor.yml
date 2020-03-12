@@ -7,12 +7,13 @@ build:
   project: jsreport.AspNetCore.sln
 before_build:
   - cmd: dotnet restore
+artifacts:
+- path: jsreport.AspNetCore\bin\Debug\jsreport.AspNetCore.*.nupkg
 deploy:
 - provider: NuGet
   server: NuGet.org
   api_key:
     secure: kyPFxy7wdkwH9QXcr4Xmw3CzEtIA1tb3LMvD11zAHunXJPRE+khZKr8hqbHfzvHm
-  artifact: jsreport.AspNetCore\bin\Debug\s.jsreport.AspNetCore.*.nupkg
   on:
     branch: master
 test_script:
