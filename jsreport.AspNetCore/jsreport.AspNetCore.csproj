@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netcoreapp3.0</TargetFrameworks>
-    <PackageId>jsreport.AspNetCore</PackageId>
+    <PackageId>s.jsreport.AspNetCore</PackageId>
     <Title>jsreport asp.net core and MVC integration</Title>
     <Authors>Jan Blaha</Authors>
     <Description>Pdf rendering from asp.net core views using jsreport, special thanks to Sergio Peralta, Moises Martinez y Carlos Salgado</Description>
