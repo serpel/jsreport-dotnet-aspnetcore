@@ -20,11 +20,6 @@
     <AssemblyVersion>2.0.3.0</AssemblyVersion>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">    
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />    
-  </ItemGroup>
-
   <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.0'">
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
