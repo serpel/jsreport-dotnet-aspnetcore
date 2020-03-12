@@ -1,8 +1,5 @@
 image: Visual Studio 2019
-artifacts:
-  - path: '**\jsreport.AspNetCore*.nupkg'
-    name: nuget
-    type: NuGetPackage
+
 environment:
   DOTNET_CLI_TELEMETRY_OPTOUT: true
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
@@ -11,11 +8,13 @@ build:
 before_build:
   - cmd: dotnet restore
 deploy:
-  provider: NuGet
+- provider: NuGet
+  server: NuGet.org
   api_key:
-    secure: nuBBgwY4vm+K1k0dMjrcHIWv87wOBDWmDRrcqJYrefhHWgafSYwR07zPLIcJ8C+P
+    secure: kyPFxy7wdkwH9QXcr4Xmw3CzEtIA1tb3LMvD11zAHunXJPRE+khZKr8hqbHfzvHm
+  artifact: jsreport.AspNetCore\bin\Debug\s.jsreport.AspNetCore.*.nupkg
   on:
-    appveyor_repo_tag: true
+    branch: master
 test_script:
 - cd jsreport.AspNetCore.Test
 - dotnet test    
